@@ -17,7 +17,8 @@ export const onFollowUser = user => {
     const {tweetsInfo} = getState().timeline;
     const sortedTweets = sortArrayFromDate([...tweetsInfo, ...tweets])
     dispatch({type: FOLLOW_USER, payload: user});
-    dispatch({type: GET_TWEETS_INFO, payload: sortedTweets})
+    dispatch({type: GET_TWEETS_INFO, payload: sortedTweets});
+    dispatch(fetchSuccess());
   }
 };
 

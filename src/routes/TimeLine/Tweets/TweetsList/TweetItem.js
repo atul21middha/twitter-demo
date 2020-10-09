@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import Card from "@material-ui/core/Card";
 import Avatar from "@material-ui/core/Avatar";
 import {getTimeDiffString} from "../../../../utils/dateHelpers";
@@ -8,7 +8,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import {useDispatch} from "react-redux";
-import {onDeleteTweet, onUpdateTweetInfo} from "../../../../redux/actions/TimeLine";
+import {onDeleteTweet} from "../../../../redux/actions/TimeLine";
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import ReplayIcon from '@material-ui/icons/Replay';
 import Checkbox from "@material-ui/core/Checkbox";
@@ -18,26 +18,10 @@ import StarIcon from '@material-ui/icons/Star';
 
 const TweetItem = ({tweet}) => {
   const dispatch = useDispatch();
-  const {id, author, content, attachments, date, comments, likes, reTweets} = tweet;
+  const {id, author, content, attachments, date} = tweet;
   const [showMoreOptions, setShowMoreOptions] = useState(null);
   const [like, setLike] = useState(false);
   const [reTweet, setReTweet] = useState(false);
-
-  useEffect(() => {
-    if (like) {
-      dispatch(onUpdateTweetInfo({...tweet, likes: tweet.likes + 1}))
-    } else {
-      dispatch(onUpdateTweetInfo({...tweet, likes: tweet.likes - 1}))
-    }
-  }, [dispatch, like])
-
-  useEffect(() => {
-    if (reTweet) {
-      dispatch(onUpdateTweetInfo({...tweet, reTweets: tweet.reTweets + 1}))
-    } else {
-      dispatch(onUpdateTweetInfo({...tweet, reTweets: tweet.reTweets - 1}))
-    }
-  }, [dispatch, reTweet]);
 
   const toggleLikeStatus = () => setLike(!like);
 
@@ -95,20 +79,20 @@ const TweetItem = ({tweet}) => {
           </div>}
 
           <div className='d-flex align-items-center justify-content-between'>
-            <div className='d-flex align-items-center' style={{cursor: 'pointer'}}>
-              <ChatBubbleOutlineIcon/> {comments.length && comments.length}
+            <div style={{cursor: 'pointer'}}>
+              <ChatBubbleOutlineIcon/>
             </div>
-            <div onClick={toggleReTweetStatus} className={`d-flex align-items-center ${reTweet ? 'text-primary' : ''}`}
+            <div onClick={toggleReTweetStatus} className={` ${reTweet ? 'text-primary' : ''}`}
                  style={{cursor: 'pointer'}}>
-              <ReplayIcon/> {reTweets > 0 && reTweets}</div>
-            <div onClick={toggleLikeStatus} className={`d-flex align-items-center ${like ? 'text-primary' : ''}`}
+              <ReplayIcon/></div>
+            <div onClick={toggleLikeStatus} className={` ${like ? 'text-primary' : ''}`}
                  style={{cursor: 'pointer'}}>
               <Checkbox
                 icon={<StarBorderIcon/>}
                 checkedIcon={<StarIcon className={like ? 'text-primary' : ''}/>}
                 checked={like}
                 size="small"
-              /> {likes > 0 && likes}</div>
+              /></div>
           </div>
 
         </div>
