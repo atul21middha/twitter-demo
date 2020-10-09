@@ -11,15 +11,7 @@ import {users} from "../../database";
 
 const INIT_STATE = {
   users: users,
-  authUser: {
-    id: 323232,
-    name: "Atul Midha",
-    username: 'atul253middha',
-    email: "atul253middha@gmail.com",
-    password: "12345678",
-    profilePic: require('../../assets/images/avatar4.jpg'),
-    following: []
-  },
+  authUser: null
 };
 
 export default (state = INIT_STATE, action) => {

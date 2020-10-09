@@ -62,8 +62,7 @@ const TweetItem = ({tweet}) => {
 
         <Avatar size={40} src={author.profilePic} alt={author.name}/>
 
-        <div className='ml-3'>
-
+        <div className='ml-3 flex-grow-1'>
           <div className='d-flex align-items-center'>
             <div className='font-weight-bold'>{author.name}</div>
             <div className='ml-3'>@{author.username}</div>

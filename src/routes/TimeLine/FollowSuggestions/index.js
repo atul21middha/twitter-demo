@@ -10,13 +10,13 @@ const FollowSuggestions = () => {
 
   useEffect(() => {
     dispatch(getSuggestionList())
-  }, []);
+  }, [dispatch]);
 
   return (
     <Card className='bg-light'>
       <div className='h4 p-3 border-bottom'>Who to follow</div>
       <div>
-      {suggestionsList.map((user,index) => <SuggestionItem key={index} user={user}/>)}
+        {suggestionsList.map((user, index) => <SuggestionItem key={index} user={user}/>)}
       </div>
     </Card>
   );

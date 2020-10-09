@@ -72,7 +72,7 @@ export const suggestionsList =  [
 export const timelineData = [
   {
     id: 3343, content: 'Awesome experience working with XYZ organization', attachments: [],
-    date: getCustomDateTime(-80, 'minutes', 'ddd MMM DD YYYY kk:mm:ss Z'),
+    date: getCustomDateTime(-1, 'days', 'ddd MMM DD YYYY kk:mm:ss Z'),
     comments: [], likes: 19, reTweets: 10,
     author:  {
       id: 2343453,
@@ -86,7 +86,7 @@ export const timelineData = [
   },
   {
     id: 34343, content: 'Hardwork is key to success, Repeat it again!', attachments: [],
-    date: getCustomDateTime(-20, 'minutes', 'ddd MMM DD YYYY kk:mm:ss Z'),
+    date: getCustomDateTime(-2, 'minutes', 'ddd MMM DD YYYY kk:mm:ss Z'),
     comments: [], likes: 454, reTweets: 234,
     author: {
       id: 323232,

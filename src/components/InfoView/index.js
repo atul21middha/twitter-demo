@@ -10,14 +10,6 @@ import {hideMessage} from "../../redux/actions/Common";
 const InfoView = () => {
   const dispatch = useDispatch();
 
-  // componentWillReceiveProps(nextProps) {
-  //   if (nextProps.error || nextProps.alertMessage) {
-  //     setTimeout(() => {
-  //       this.props.hideMessage();
-  //     }, 1500);
-  //   }
-  // }
-
   const {error, loading} = useSelector(({common}) => common);
 
   return (

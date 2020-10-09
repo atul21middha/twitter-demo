@@ -12,4 +12,4 @@ export const sortArrayFromDate = (arr, order='asc') => {
    const bDate = new Date(b.date);
    return bDate - aDate;
  })
-}
+};

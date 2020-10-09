@@ -9,8 +9,8 @@ import {onUserSignIn} from "../../redux/actions/Auth";
 
 const Login = () => {
   const dispatch = useDispatch();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('demo@testing.com');
+  const [password, setPassword] = useState('12345678');
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
 

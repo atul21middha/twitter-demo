@@ -5,15 +5,16 @@ import SearchIcon from '@material-ui/icons/Search';
 import Button from "@material-ui/core/Button";
 import {useDispatch} from "react-redux";
 import {onUserSignOut} from "../../redux/actions/Auth";
+import {Link} from "react-router-dom";
 
 const Header = () => {
   const dispatch = useDispatch();
 
   return (
     <div className='px-5 py-2 border-bottom d-flex align-items-center'>
-      <div>
+      <Link to='/home' style={{cursor: 'pointer'}}>
         <img src={require('../../assets/images/twitter_logo.png')} alt='logo' height={50} width={50}/>
-      </div>
+      </Link>
       <div className='ml-5'>
         <TextField
           size="small"

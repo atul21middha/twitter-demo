@@ -7,6 +7,7 @@ import {useDropzone} from "react-dropzone";
 import Button from "@material-ui/core/Button";
 import {onCreateNewTweet} from "../../../../redux/actions/TimeLine";
 import {idGenerator} from "../../../../utils/commonHelpers";
+import ImageIcon from '@material-ui/icons/Image';
 
 const CreateTweet = () => {
   const dispatch = useDispatch();
@@ -77,7 +78,7 @@ const CreateTweet = () => {
           {...getRootProps()}
           className="d-flex align-items-center mr-2">
           <input {...getInputProps()} />
-          Add Image
+          <ImageIcon/>  Add Image
         </div>
         <div className='ml-auto'>
           <Button

@@ -11,7 +11,10 @@ export const onUserSignUp = (user) => {
       if (checkedUser) {
         dispatch((fetchError("The Email you entered is already registered")))
       } else {
-        dispatch({type: USER_SIGN_UP, payload: {...user, profilePic: '', following: [], id: idGenerator()}});
+        dispatch({
+          type: USER_SIGN_UP,
+          payload: {...user, username: 'demo_user', profilePic: '', following: [], id: idGenerator()}
+        });
         dispatch((fetchSuccess()))
       }
     } else {

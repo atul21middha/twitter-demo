@@ -9,8 +9,6 @@ const SuggestionItem = ({user}) => {
   const {authUser} = useSelector(({auth}) => auth);
   const {profilePic, username, name} = user;
 
-  console.log("authUser", authUser);
-
   const isUserFollowed = authUser.following.some((item) => item.id === user.id);
   return (
     <div className='d-flex align-items-center border-bottom mt-3 p-3'>
