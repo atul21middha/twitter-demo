@@ -3,8 +3,6 @@ import Grid from "@material-ui/core/Grid";
 import Sidebar from "./Sidebar";
 import Tweets from "./Tweets";
 import FollowSuggestions from "./FollowSuggestions";
-import {Route, Switch} from "react-router-dom";
-import Login from "../Auth/Login";
 
 const TimeLine = () => {
   return (
@@ -14,10 +12,6 @@ const TimeLine = () => {
           <Sidebar/>
         </Grid>
         <Grid item xs={6}>
-          <Switch>
-            <Route path="/home" exact component={Tweets} />
-            <Route path="/messages" exact component={Login} />
-          </Switch>
           <Tweets/>
         </Grid>
         <Grid item xs={3}>

@@ -22,12 +22,12 @@ const SuggestionItem = ({user}) => {
         </div>
       </div>
       {isUserFollowed ?
-        <Button className='ml-auto rounded' variant="contained" color="primary"
+        <Button className='ml-auto rounded' variant="contained" size='small' color="primary"
                 onClick={() => dispatch(onUnFollowUser(user.id))}>
           UnFollow
         </Button>
         :
-        <Button className='ml-auto rounded' variant="outlined" color="primary"
+        <Button className='ml-auto rounded' size='small' variant="outlined" color="primary"
                 onClick={() => dispatch(onFollowUser(user))}>
           Follow
         </Button>}

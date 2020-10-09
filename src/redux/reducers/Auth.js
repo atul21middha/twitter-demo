@@ -14,10 +14,10 @@ const INIT_STATE = {
   authUser: {
     id: 323232,
     name: "Atul Midha",
+    username: 'atul253middha',
     email: "atul253middha@gmail.com",
     password: "12345678",
-    username: 'atul253middha',
-    profilePic: '',
+    profilePic: require('../../assets/images/avatar4.jpg'),
     following: []
   },
 };

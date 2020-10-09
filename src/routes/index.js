@@ -6,6 +6,7 @@ import TimeLine from "./TimeLine";
 import Login from "./Auth/Login";
 import Signup from "./Auth/Signup";
 import Header from "../components/Header";
+import InfoView from "../components/InfoView";
 
 const RestrictedRoute = ({ component: Component, ...rest }) => {
   const { authUser } = useSelector(({ auth }) => auth);
@@ -52,6 +53,7 @@ const Routes = () => {
         <Route path="/signin" exact component={Login} />
         <Route path="/signup" exact component={Signup} />
       </Switch>
+      <InfoView/>
     </React.Fragment>
   );
 };

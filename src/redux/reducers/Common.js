@@ -1,4 +1,4 @@
-import {FETCH_ERROR, FETCH_START, FETCH_SUCCESS} from "../ActionTypes";
+import {FETCH_ERROR, FETCH_START, FETCH_SUCCESS, HIDE_MESSAGE} from "../ActionTypes";
 
 const INIT_STATE = {
   error: '',
@@ -15,6 +15,12 @@ export default (state = INIT_STATE, action) => {
     }
     case FETCH_ERROR: {
       return { ...state, loading: false, error: action.payload };
+    }
+    case HIDE_MESSAGE: {
+      return {
+        ...state,
+        error: ''
+      }
     }
     default:
       return state;

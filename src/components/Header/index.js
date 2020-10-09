@@ -26,7 +26,7 @@ const Header = () => {
             ),
           }}
           variant="outlined"
-          placeholder="Search events people you"
+          placeholder="Search people around you"
         />
       </div>
       <div className='ml-auto'>
