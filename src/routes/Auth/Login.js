@@ -27,7 +27,7 @@ const Login = () => {
   };
 
   return (
-    <div className='d-flex flex-column align-items-center justify-content-center h-100 p-5 vh-100'>
+    <div className='d-flex flex-column align-items-center justify-content-center p-5 vh-100'>
       <div className='d-flex flex-column justify-content-center align-items-center' style={{minWidth: 400}}>
         <div>
           <img src={require('../../assets/images/twitter_logo.png')} alt='logo' height={100} width={100}/>

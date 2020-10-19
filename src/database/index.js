@@ -29,7 +29,8 @@ export const suggestionsList =  [
     email: 'john@doe.com',
     password: '12345678',
     profilePic: require('../assets/images/avatar5.jpg'),
-    following: []
+    following: [],
+    followers: 1365
   },
   {
     id: 43543545,
@@ -38,7 +39,8 @@ export const suggestionsList =  [
     email: 'sara.taylor@example.com',
     password: '12345678',
     profilePic: require('../assets/images/avatar6.jpg'),
-    following: []
+    following: [],
+    followers: 586
   },
   {
     id: 34344,
@@ -47,7 +49,8 @@ export const suggestionsList =  [
     email: 'kane.lee@xyz.com',
     password: '12345678',
     profilePic: require('../assets/images/avatar7.jpg'),
-    following: []
+    following: [],
+    followers: 8967
   },
   {
     id: 856777,
@@ -56,7 +59,8 @@ export const suggestionsList =  [
     email: 'rahul.dravid@bcci.com',
     password: '12345678',
     profilePic: require('../assets/images/avatar8.jpg'),
-    following: []
+    following: [],
+    followers: 9351
   },
   {
     id: 443443,
@@ -65,7 +69,8 @@ export const suggestionsList =  [
     email: 'demo@testing.com',
     password: '12345678',
     profilePic: require('../assets/images/avatar4.jpg'),
-    following: []
+    following: [],
+    followers: 4243
   }
 ];
 

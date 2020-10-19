@@ -1,16 +1,10 @@
-import React, {useEffect} from 'react';
-import {useDispatch, useSelector} from "react-redux";
-import {getSuggestionList} from "../../../redux/actions/TimeLine";
+import React from 'react';
+import {useSelector} from "react-redux";
 import Card from "@material-ui/core/Card";
 import SuggestionItem from "./SuggestionItem";
 
 const FollowSuggestions = () => {
-  const dispatch = useDispatch();
   const {suggestionsList} = useSelector(({timeline}) => timeline);
-
-  useEffect(() => {
-    dispatch(getSuggestionList())
-  }, [dispatch]);
 
   return (
     <Card className='bg-light'>
